@@ -1,0 +1,41 @@
+package:
+  name: gsaqulifier      # 包的名称（必须全小写）
+  version: "1.0.0"      # 包的版本号
+
+source:
+  # 源码的来源，可以是 URL (tar.gz), git 仓库，或者本地路径 (path: ../src)
+  #url: https://github.com/username/my_package/archive/v1.0.0.tar.gz
+  # 建议加上 SHA256 校验和确保安全
+
+build:
+  number: 0             # 构建号，如果版本没变但重新打包，将此数字加 1
+  # script: "{{ PYTHON }} -m pip install . -vv" # 如果是极简 Python 包，可以直接在这里写安装命令，无需 build.sh
+
+requirements:
+  build:                # 编译时需要的工具（如编译器）
+    - {{ compiler('c') }} # 如果包含 C 扩展
+    - {{ compiler('cxx') }} 
+  host:                 # 编译环境依赖（指定架构相关的依赖，如 Python）
+    - python 3.10.5 
+    - pip
+    - setuptools
+  run:                  # 运行时依赖（用户安装此包时会被自动下载的依赖）
+    - python
+    - numpy
+    - pandas
+    - bioconda
+    - stringtie
+    - mash
+    - regtools
+    - gffread
+
+test:
+  imports:
+    - GSAQualifier        # 测试安装后是否能成功 import
+  # commands:
+  #   - my_package --help # 也可以添加命令行测试
+
+about:
+  home: https://github.com/username/my_package
+  license: MIT
+  summary: "GSAqualifier: A novel algorithm/toolkit assessing genome annotation accuracy through splice junction pattern analysis"
