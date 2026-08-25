@@ -38,7 +38,7 @@ pip install -r requirements.txt
 git clone  https://github.com/Mavis-Mai/GSAqualifier.git
 
 #Download Database
-wget https://github.com/Mavis-Mai/GSAqualifier/releases/download/v1.0.0/GSAqualifier_Dataset_v1.0.tar.gz
+wget --no-check-certificate https://github.com/Mavis-Mai/GSAqualifier/releases/download/v1.0.0/GSAqualifier_Dataset_v1.0.tar.gz
 tar -xzf GSAqualifier_Dataset_v1.0.tar.gz
 ```
 
