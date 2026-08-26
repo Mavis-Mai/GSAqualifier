@@ -85,6 +85,10 @@ GSAqualifier csq -f  Arabidopsis_thaliana.genome.fna -g Arabidopsis_thaliana.gen
 | output_busco_pie.stat | Statistical information on target species gene classification. |
 | Missing_busco.id | Gene ID information from the database is missing in the annotation of the target genome. |
 
+output_busco_pie.png：
+<a href="images/Figure1v8.jpg">
+  <img src="images/output_busco_pie.png" alt="pic" width="500">
+</a>
 
 ## <font style="color:rgb(0, 0, 0);"> 02. CSQ2sp mode </font>
 This model conducts a detailed and comprehensive analysis of the similarity of each homologous gene by evaluating the CSQ score distribution of homologous genes between two species.
